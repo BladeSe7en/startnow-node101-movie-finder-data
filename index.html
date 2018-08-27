@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="http://img.igl.net/css/colorbox.css">
+    <script type="text/javascript" src="http://www.myleague.com/premium/js/popup.js"></script>
+    <script type="text/javascript" src="http://img.igl.net/js/MochiKit1.4/MochiKit.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://img.igl.net/js/colorbox/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="http://img.igl.net/js/Ladder/admin.js"></script>
+    <script type="text/javascript" src="/js/admin.js"></script>
+    <script type="text/javascript" src="http://www.igl.net/js/showad.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.cboxModal").colorbox({ width: "80%", height: "80%", iframe: true });
+        });
+    </script>
+
+    <script type="text/javascript">
+        var showModules = 'false';
+        function toggleModules() {
+            if (showModules == 'false') {
+                //getElement('editModuleDescription').style.display = 'none';
+                showModules = 'true';
+                blindDown('mods');
+            } else {
+                showModules = 'false';
+                blindUp('mods');
+                //getElement('editModuleDescription').style.display = 'block';
+            }
+        }
+    </script>
+    <style type="text/css">
+        a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            font-size: 10pt
+        }
+
+        a:hover {
+            color: #FFFF00;
+            text-decoration: none;
+        }
+
+        #MainMenu td {
+            margin: 5px;
+            font-family: Arial;
+            padding: 5px;
+        }
+
+        #Title td {
+            font-family: Arial;
+        }
+
+        #header {
+            background-image: url(http://img.igl.net/images/adminheaderbg.jpg);
+            background-repeat: repeat-x;
+            height: 65px;
+            width: 100%;
+        }
+
+        #logo {
+            float: left9;
+            width: 250px;
+            height: 65px;
+        }
+
+        .title {
+            color: #0bd6fe;
+            font-size: 25px;
+            font-type: Arial, San-Seriff;
+            font-weight: normal;
+            height: 50px;
+            margin-left: 100px;
+            padding-top: 10px;
+            width: 450px;
+            float: left;
+        }
+
+        li {
+            margin: 3px;
+            padding: 0px;
+            padding-bottom: 10px;
+            list-style-type: none;
+        }
+
+        pre {
+            font-family: arial, san-seriff;
+            font-weight: normal;
+        }
+
+        .blueHeader {
+            background-color: #0DD7FF;
+        }
+
+        .greyField {
+            background-color: #313D3D;
+        }
+
+        .greenHeader {
+            background-color: #35A600;
+        }
+
+        .greenField {
+            background-color: #A3FCA8;
+        }
+
+        .purpleHeader {
+            background-color: #7B49AC;
+        }
+
+        .pinkHeader {
+            background-color: #FE57FF;
+        }
+
+        .orangeHeader {
+            background-color: #FF7C00;
+        }
+
+        .darkBlueHeader {
+            background-color: #01147B;
+        }
+
+        .Menu a {
+            font-weight: bold;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+
+        div.date {
+            background: none repeat scroll 0% 0% rgb(153, 153, 0);
+            padding: 5px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" vlink="#FFFFFF" onunload="enableBtnLogSearch();">
+    <div>
+        <div align="right" style="font-family: arial; font-size: 10pt">
+            <table border=0 cellpadding=3 cellspacing=0>
+                <tr style="font-family: arial; font-size: 10pt">
+                    <td><a href="javascript:popinfo('http://www.myleague.com/my/adm_help.php?id=report',600,400,1)"><img src="http://img.igl.net/image/info1.gif"
+                                height=25 width=25 border=0 alt=""></a></td>
+                    <td valign="middle">Need <a href="javascript:popinfo('http://www.myleague.com/my/adm_help.php?id=report',600,400,1)">Help
+                            on this Tool</a>?</td>
+                    <td>Back to the <a href="http://cgi8.igl.net/cgi-bin/ladder/admin/admin.cgi?name=BladeSe7enRF&pass=jwxig7e&ladd=civplayersc6rf&stamp=1535068086&hash=cd0141ea3275a6e232223d8a30eb2c3c&do=ShowMenu">Admin
+                            Menu</a>.</td>
+                </tr>
+            </table>
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0" width=100% style="font-family: arial">
+            <tr>
+                <td>
+                    <h1>
+                        <font face=arial>Report Match
+                    </h1>
+                    </font>
+                    <font face=arial>
+                        <FORM ACTION=http://cgi8.igl.net/cgi-bin/ladder/sql/report.cgi METHOD=POST name=report>
+                            <INPUT TYPE=hidden NAME=ladd VALUE=civplayersc6rf><table>
+                                <tr>
+                                    <td>Loser's name:</td>
+                                    <td>
+                                        <INPUT TYPE=text NAME=name SIZE=18></td>
+                                </tr>
+                                <INPUT TYPE=hidden NAME=pass VALUE=myleagueadmin>
+                                <INPUT TYPE=hidden NAME=stamp VALUE=1535068086>
+                                <INPUT TYPE=hidden NAME=my_name value="BladeSe7enRF"><table><input type=hidden name=svr value=cgi8>
+                                    <INPUT TYPE=hidden NAME=my_track VALUE=BladeSe7enRF><input type=hidden name=hash value='cd0141ea3275a6e232223d8a30eb2c3c'><tr>
+                                        <td>Winner's name:</td>
+                                        <td>
+                                            <INPUT TYPE=text NAME=chal SIZE=18></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Penalty?</td>
+                                        <td><SELECT NAME=penal><option selected>No
+                                                    <option>Yes
+                                                        <option>Drop</select></tr>
+                                    <tr>
+                                        <td>Comment:</td>
+                                        <td>
+                                            <INPUT TYPE=text NAME=comm SIZE=30></tr>
+                                    <tr>
+                                        <td colspan=2>
+                                            <INPUT TYPE=submit VALUE="Submit Report"></td>
+                                    </tr>
+                        </form>
+                        </table>
+    </div>
+</body>
+
+</html>
+<!-- Analytics -->
+<script type="text/javascript" src="https://img.igl.net/js/clga.js"></script>
+</font>
